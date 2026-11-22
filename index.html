@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A7msx5 | Staff Portfolio</title>
+<meta name="description" content="A7msx5's professional Minecraft staff portfolio. Experience in moderation, administration and management.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --blue: #2878db;
+  --dark: #10233f;
+  --light: #eef6ff;
+  --white: #ffffff;
+  --muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f9ff;
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 9%;
+  border-bottom: 1px solid #e3edfa;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 23px;
+  color: var(--blue);
+}
+
+nav a {
+  text-decoration: none;
+  color: #42536b;
+  margin-left: 22px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+.hero {
+  min-height: 590px;
+  padding: 110px 9%;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, #c9e2ff 0%, transparent 35%),
+    linear-gradient(135deg, #102c53, #174c87);
+  color: white;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #c7e2ff;
+  border-radius: 30px;
+  padding: 7px 17px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 8vw, 78px);
+  font-weight: 900;
+  margin: 20px 0 8px;
+  letter-spacing: -3px;
+}
+
+.hero h2 {
+  color: #a8d1ff;
+  font-size: clamp(19px, 3vw, 27px);
+}
+
+.hero p {
+  color: #d6e8ff;
+  max-width: 600px;
+  margin: 22px 0 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: #18559a;
+  padding: 13px 23px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px #071a3344;
+}
+
+section {
+  padding: 85px 9%;
+}
+
+.section-label {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+section h2 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+}
+
+.about {
+  max-width: 800px;
+  color: #596a81;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.stat {
+  background: white;
+  border: 1px solid #e1ecfa;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 5px 20px #173e7010;
+}
+
+.stat h3 {
+  font-size: 32px;
+  color: var(--blue);
+}
+
+.stat p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.experience {
+  background: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 17px;
+}
+
+.card {
+  background: #f5f9ff;
+  border: 1px solid #e2edfa;
+  padding: 22px;
+  border-radius: 13px;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #8abfff;
+}
+
+.card h3 {
+  font-size: 17px;
+}
+
+.role {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.members {
+  display: block;
+  margin-top: 8px;
+  color: #7b8ca3;
+  font-size: 12px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.skill {
+  background: white;
+  border: 1px solid #e1ecfa;
+  border-radius: 13px;
+  text-align: center;
+  padding: 28px 12px;
+  font-weight: 800;
+}
+
+.skill span {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.objective {
+  background: #eaf3ff;
+  border-radius: 18px;
+  padding: 35px;
+  color: #536780;
+}
+
+.contact {
+  text-align: center;
+  background: linear-gradient(135deg,#102c53,#174c87);
+  color: white;
+}
+
+.contact p {
+  color: #d3e6ff;
+  margin-bottom: 22px;
+}
+
+footer {
+  background: #0b1d35;
+  color: #91a9c7;
+  padding: 23px;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media(max-width:700px) {
+  nav {
+    padding: 15px 5%;
+  }
+
+  nav a {
+    margin-left: 9px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 85px 7%;
+  }
+
+  section {
+    padding: 65px 7%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">A7msx5.</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <span class="tag">MINECRAFT STAFF PORTFOLIO</span>
+    <h1>A7msx5.</h1>
+    <h2>Senior Moderator | Senior Administrator</h2>
+    <p>
+      Experienced Minecraft staff member with a background
+      in moderation, administration, community management
+      and leadership. Dedicated to building better communities.
+    </p>
+    <a href="#experience" class="btn">Explore My Experience →</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="section-label">01 / INTRODUCTION</div>
+  <h2>About Me</h2>
+  <p class="about">
+    Hello! I'm A7msx5, an experienced Minecraft staff member
+    with experience across multiple Minecraft communities.
+    Throughout my journey, I've held positions ranging from
+    Helper and Moderator to Administrator, Founder and Co-Owner.
+
+    <br><br>
+
+    I've developed skills in managing teams, handling player
+    situations, maintaining server communities and ensuring
+    a professional and enjoyable environment for everyone.
+
+    I'm always looking to improve, learn and contribute
+    positively to the communities I work with.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>11+</h3>
+      <p>Listed staff positions</p>
+    </div>
+    <div class="stat">
+      <h3>2,000+</h3>
+      <p>Largest server community</p>
+    </div>
+    <div class="stat">
+      <h3>4</h3>
+      <p>Core professional skills</p>
+    </div>
+  </div>
+</section>
+
+<section class="experience" id="experience">
+  <div class="section-label">02 / BACKGROUND</div>
+  <h2>Previous Experience</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>ForgeSMP</h3>
+      <div class="role">Founder</div>
+      <span class="members">150 Members</span>
+    </div>
+    <div class="card">
+      <h3>PrimeSMP</h3>
+      <div class="role">Administrator</div>
+      <span class="members">700 Members</span>
+    </div>
+    <div class="card">
+      <h3>AquaticSMP</h3>
+      <div class="role">Helper</div>
+      <span class="members">2,000 Members</span>
+    </div>
+    <div class="card">
+      <h3>RallySMP</h3>
+      <div class="role">Co-Owner</div>
+      <span class="members">200 Members</span>
+    </div>
+    <div class="card">
+      <h3>PancakeSMP</h3>
+      <div class="role">Senior Moderator</div>
+      <span class="members">600 Members</span>
+    </div>
+    <div class="card">
+      <h3>Additional Servers</h3>
+      <div class="role">Various Staff Positions</div>
+      <span class="members">60–200 Members</span>
+    </div>
+  </div>
+</section>
+
+<section id="current">
+  <div class="section-label">03 / CURRENT ROLES</div>
+  <h2>Current Positions</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>HazeSMP</h3>
+      <div class="role">Administrator</div>
+      <span class="members">800 Members</span>
+    </div>
+    <div class="card">
+      <h3>AngelVanilla</h3>
+      <div class="role">Media Manager</div>
+      <span class="members">300 Members</span>
+    </div>
+    <div class="card">
+      <h3>OgdonutSMP</h3>
+      <div class="role">Moderator</div>
+      <span class="members">75 Members</span>
+    </div>
+    <div class="card">
+      <h3>SxullSMP</h3>
+      <div class="role">Co-Owner</div>
+      <span class="members">170 Members</span>
+    </div>
+    <div class="card">
+      <h3>Bruh (Discord Community)</h3>
+      <div class="role">Moderator</div>
+      <span class="members">300 Members</span>
+    </div>
+    <div class="card">
+      <h3>BascalHost</h3>
+      <div class="role">Staff Manager</div>
+      <span class="members">Currently Offline</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="experience">
+  <div class="section-label">04 / EXPERTISE</div>
+  <h2>My Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill"><span>🛡️</span>Moderation</div>
+    <div class="skill"><span>💬</span>Communication</div>
+    <div class="skill"><span>🤝</span>Teamwork</div>
+    <div class="skill"><span>📋</span>Management</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-label">05 / MY GOAL</div>
+  <h2>Why Choose Me?</h2>
+  <div class="objective">
+    I believe that being a staff member is about more than
+    permissions or ranks. It requires responsibility,
+    professionalism, communication and dedication.
+
+    <br><br>
+
+    My experience in different leadership and moderation
+    positions has helped me understand how Minecraft
+    communities operate. I aim to contribute by supporting
+    staff teams, handling situations professionally,
+    maintaining community standards and helping servers grow.
+
+    <br><br>
+
+    I'm currently interested in Senior Moderator and
+    Senior Administrator opportunities where I can use
+    my experience to make a meaningful difference.
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-label">06 / GET IN TOUCH</div>
+  <h2>Let's Work Together.</h2>
+  <p>
+    Interested in having me as part of your staff team?
+    Feel free to reach out!
+  </p>
+
+  <!-- Replace YOUR_DISCORD with your Discord username -->
+  <a href="https://discord.com/users/YOUR_DISCORD"
+     class="btn">Contact Me on Discord</a>
+</section>
+
+<footer>
+  © 2026 A7msx5. All rights reserved.
+  <br>
+  Minecraft Staff Portfolio
+</footer>
+
+</body>
+</html>
